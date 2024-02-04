@@ -1,0 +1,23 @@
+.question {
+    border-radius: .2rem;
+    overflow: hidden;
+    background-color: #fffbfb;
+    white-space: pre-wrap;
+}
+
+.title {
+    padding: 0.5rem;
+    display: block;
+    background-color: #fff1f1;
+}
+
+@media (min-width: 425px) {
+    .title {
+        font-size: 1.25rem;
+    }
+}
+
+.code {
+    display: block;
+    padding: 0.5rem;
+}

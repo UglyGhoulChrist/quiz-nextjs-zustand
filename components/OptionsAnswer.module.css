@@ -1,0 +1,29 @@
+.answers {
+    border-radius: .2rem;
+    overflow: hidden;
+    background-color: #fbfbff;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.title {
+    padding: 0.5rem;
+    display: block;
+    background-color: #f1f1ff;
+}
+
+@media (min-width: 425px) {
+    .title {
+        font-size: 1.25rem;
+    }
+}
+
+.answer {
+    padding: 0 0.5rem;
+}
+
+.footer {
+    padding: .5rem;
+    text-align: start;
+}

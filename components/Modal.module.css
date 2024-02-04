@@ -1,0 +1,64 @@
+.modal {
+    position: fixed;
+    z-index: 2;
+    padding: 1rem;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, .7);
+    overflow-y: auto;
+    display: grid;
+    place-items: center;
+}
+
+.content {
+    margin: auto;
+    width: 100%;
+    max-width: 400px;
+    background: white;
+    border-radius: 0.25rem;
+}
+
+.title {
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 1px solid #dee2e6;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.explanation {
+    padding: 1rem;
+    text-align: justify;
+}
+
+.footer {
+    border-top: 1px solid #dee2e6;
+    padding: 1rem;
+    text-align: end;
+}
+
+/* Animated modal Start */
+
+.modal {
+    transition: all 0.5s ease 0s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal>div {
+    transition: all 0.5s ease 0s;
+    transform: translateX(30vh);
+}
+
+.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.visible>div {
+    transform: translateX(0);
+}
+
+/* Animated modal End */
