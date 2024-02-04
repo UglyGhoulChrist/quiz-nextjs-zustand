@@ -5,12 +5,30 @@ import Modal from '@/components/Modal'
 
 async function getData(): Promise<IQuestion[]> {
 
-    // Fetch data on *.json or *.ts file
-    const res: Response = await fetch(`${process.env.API_HOST}/v2/questions/`)
+    try {
+        // Fetch data on *.json or *.ts file
+        const res: Response = await fetch(`${process.env.API_HOST}/v2/questions/`)
 
-    if (!res.ok) throw new Error('Failed to fetch data')
+        if (!res.ok) throw new Error('Failed to fetch data')
 
-    return res.json()
+        return res.json()
+
+    } catch (error) {
+
+        return [
+            {
+                id: 0,
+                textQuestion: 'textQuestion',
+                listAnswers: [
+                    'Answer 0',
+                    'Answer 1',
+                    'Answer 2',
+                    'Answer 3',
+                ],
+                indexRightAnswer: 0,
+                explanation: 'explanation',
+            }]
+    }
 }
 
 async function Page(): Promise<JSX.Element> {
