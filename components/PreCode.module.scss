@@ -3,12 +3,27 @@
     overflow: hidden;
     background-color: #fffbfb;
     white-space: pre-wrap;
+
+    &:hover button {
+        border-color: #888;
+        color: #888;
+    }
+}
+
+.id {
+    opacity: .5;
+}
+
+.header {
+    padding: 0.5rem;
+    gap: .5rem;
+    background-color: #fff1f1;
+    display: flex;
+    align-items: center;
 }
 
 .title {
-    padding: 0.5rem;
-    display: block;
-    background-color: #fff1f1;
+    flex: auto;
 }
 
 @media (min-width: 425px) {
