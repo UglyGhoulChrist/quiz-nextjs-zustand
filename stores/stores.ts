@@ -19,4 +19,18 @@ const useModal = create<UseModal>()((set, get) => ({
     setDataModal: (dataModal) => set({ dataModal }),
 }))
 
-export { useModal }
+interface UseCounter {
+    correct: number,
+    inCorrect: number,
+    setCorrect: () => void,
+    setInCorrect: () => void,
+}
+
+const useCounter = create<UseCounter>((set, get) => ({
+    correct: 0,
+    inCorrect: 0,
+    setCorrect: () => set((state) => ({ correct: state.correct + 1 })),
+    setInCorrect: () => set((state) => ({ correct: state.correct + 1 })),
+}))
+
+export { useModal, useCounter }

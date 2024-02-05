@@ -2,11 +2,16 @@
     background-color: #212529;
 }
 
-.nav {
+.container {
     max-width: 1320px;
     margin: 0 auto;
     padding: 1rem .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
+
+.nav {}
 
 .link {
     font-size: 1.25rem;
