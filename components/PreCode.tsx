@@ -6,7 +6,7 @@ type Props = {
     question: IQuestion,
 }
 
-function PreCode({ question }: Props) {
+function PreCode({ question }: Props): JSX.Element {
 
     const { id, textQuestion } = question
 

@@ -6,7 +6,7 @@ type Props = {
     question: IQuestion,
 }
 
-function OptionsAnswer({ question }: Props) {
+function OptionsAnswer({ question }: Props): JSX.Element {
 
     return (
 

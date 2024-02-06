@@ -10,7 +10,7 @@ type Props = {
     question: IQuestion,
 }
 
-function Form({ question }: Props) {
+function Form({ question }: Props): JSX.Element {
 
     // Деструктуризация Props-question
     const { id, listAnswers, indexRightAnswer, explanation } = question
@@ -45,8 +45,6 @@ function Form({ question }: Props) {
             setCorrect()
         } else { setInCorrect() }
 
-
-        console.log(idxUserAnswer)
         // Zustand состояние. Заполняю данными форму.
         setDataModal({ indexRightAnswer, rightAnswer, explanation, idxUserAnswer })
         // Zustand состояние. Показываю форму.
@@ -56,13 +54,11 @@ function Form({ question }: Props) {
     return (
         <>
             <form onSubmit={handleSubmit} className={styles.form}>
-
                 {listAnswers.map((answer, idx) => (
                     <label key={idx} className={styles.answer}>
                         <input onClick={() => handleInput(idx)} type='radio' id={`input_${id}_${idx}`} name={`input_${id}`} />
                         {answer}</label>
                 ))}
-
                 <Button text='Ответить' />
             </form>
         </>

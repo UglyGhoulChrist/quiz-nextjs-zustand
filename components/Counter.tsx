@@ -3,10 +3,10 @@
 import styles from '@/components/Counter.module.css'
 import { useCounter } from '@/stores/stores'
 
-function Counter() {
+function Counter(): JSX.Element {
 
-    const correct = useCounter(state => state.correct)
-    const inCorrect = useCounter(state => state.inCorrect)
+    const correct: number = useCounter<number>(state => state.correct)
+    const inCorrect: number = useCounter<number>(state => state.inCorrect)
 
     return (
 

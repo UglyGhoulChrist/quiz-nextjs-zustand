@@ -1,7 +1,6 @@
 import { IDataModal } from '@/interfaces/interfaces'
 import { create } from 'zustand'
-
-// import { persist, createJSONStorage } from 'zustand/middleware'
+import { persist, createJSONStorage } from 'zustand/middleware'
 
 interface UseModal {
     modalVisible: boolean,
@@ -26,11 +25,16 @@ interface UseCounter {
     setInCorrect: () => void,
 }
 
-const useCounter = create<UseCounter>((set, get) => ({
+const useCounter = create<UseCounter>()(persist((set, get) => ({
     correct: 0,
     inCorrect: 0,
     setCorrect: () => set((state) => ({ correct: state.correct + 1 })),
     setInCorrect: () => set((state) => ({ inCorrect: state.inCorrect - 1 })),
-}))
+}),
+    {
+        name: 'quiz-js-counter-storage',
+        storage: createJSONStorage(() => localStorage),
+    },
+))
 
 export { useModal, useCounter }

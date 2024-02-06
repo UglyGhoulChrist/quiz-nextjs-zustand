@@ -4,7 +4,6 @@ import styles from '@/components/Card.module.css'
 import PreCode from '@/components/PreCode'
 import OptionsAnswer from '@/components/OptionsAnswer'
 
-
 import javascript from '@/highlight/javascript'
 hljs.registerLanguage('javascript', javascript)
 import hljs from '@/highlight/core'
@@ -22,6 +21,7 @@ function Card({ question }: Props) {
     }, [])
 
     return (
+
         <li className={styles.card}>
             <PreCode question={question} />
             <OptionsAnswer question={question} />
