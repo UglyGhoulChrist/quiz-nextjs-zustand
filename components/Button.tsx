@@ -2,7 +2,7 @@ import styles from '@/components/Button.module.css'
 
 type Props = {
     text: string,
-    onClick: () => void,
+    onClick?: () => void,
 }
 
 function Button({ text, onClick }: Props): JSX.Element {

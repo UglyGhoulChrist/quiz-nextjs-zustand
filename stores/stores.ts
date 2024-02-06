@@ -30,7 +30,7 @@ const useCounter = create<UseCounter>((set, get) => ({
     correct: 0,
     inCorrect: 0,
     setCorrect: () => set((state) => ({ correct: state.correct + 1 })),
-    setInCorrect: () => set((state) => ({ correct: state.correct + 1 })),
+    setInCorrect: () => set((state) => ({ inCorrect: state.inCorrect - 1 })),
 }))
 
 export { useModal, useCounter }

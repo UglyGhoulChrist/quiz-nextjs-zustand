@@ -6,7 +6,7 @@ import { IQuestion } from '@/interfaces/interfaces'
 
 async function GET(req: NextRequest): Promise<NextResponse<IQuestion[]>> {
 
-    return NextResponse.json(listQuestions)
+    return NextResponse.json(listQuestions.slice(1, 10))
 }
 
 export { GET } 

@@ -2,9 +2,6 @@
     border-radius: .2rem;
     overflow: hidden;
     background-color: #fbfbff;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
 }
 
 .title {
@@ -17,13 +14,4 @@
     .title {
         font-size: 1.25rem;
     }
-}
-
-.answer {
-    padding: 0 0.5rem;
-}
-
-.footer {
-    padding: .5rem;
-    text-align: start;
 }

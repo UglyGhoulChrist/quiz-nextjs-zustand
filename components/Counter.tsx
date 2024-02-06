@@ -6,7 +6,7 @@ import { useCounter } from '@/stores/stores'
 function Counter() {
 
     const correct = useCounter(state => state.correct)
-    const inCorrect = useCounter(state => state.correct)
+    const inCorrect = useCounter(state => state.inCorrect)
 
     return (
 

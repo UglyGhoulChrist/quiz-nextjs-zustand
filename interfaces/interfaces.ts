@@ -7,8 +7,10 @@ interface IQuestion {
 }
 
 interface IDataModal {
+    indexRightAnswer?: number,
     rightAnswer?: string,
     explanation?: string,
+    idxUserAnswer?: null | 0 | 1 | 2 | 3,
 }
 
 export type { IQuestion, IDataModal }
