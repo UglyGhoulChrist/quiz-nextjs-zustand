@@ -1,6 +1,13 @@
+'use client'
+
 import styles from '@/components/PreCode.module.scss'
 import { IQuestion } from '@/interfaces/interfaces'
 import Copy from './Copy'
+
+import javascript from '@/highlight/javascript'
+hljs.registerLanguage('javascript', javascript)
+import hljs from '@/highlight/core'
+import { useEffect } from 'react'
 
 type Props = {
     question: IQuestion,
@@ -9,6 +16,11 @@ type Props = {
 function PreCode({ question }: Props): JSX.Element {
 
     const { id, textQuestion } = question
+
+    useEffect(() => {
+        hljs.highlightAll()
+    }, [])
+
 
     return (
 

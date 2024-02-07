@@ -1,5 +1,6 @@
 import styles from '@/components/Header.module.css'
 import Counter from './Counter'
+import Refresh from './Refresh'
 
 function Header(): JSX.Element {
 
@@ -17,6 +18,7 @@ function Header(): JSX.Element {
                         Quiz
                     </a>
                 </nav>
+                <Refresh />
                 <Counter />
             </div>
         </header>

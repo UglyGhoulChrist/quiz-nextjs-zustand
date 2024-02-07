@@ -7,7 +7,7 @@ async function getData(): Promise<IQuestion[]> {
 
     try {
         // Fetch data on *.json or *.ts file
-        const res: Response = await fetch(`${process.env.API_HOST}/v2/questions/`)
+        const res: Response = await fetch(`${process.env.API_HOST}/v2/questions/`, { cache: 'no-store' })
 
         if (!res.ok) throw new Error('Failed to fetch data')
 
