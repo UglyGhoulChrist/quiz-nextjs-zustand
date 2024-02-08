@@ -1,5 +1,6 @@
 .counter {
     color: #fff;
+    min-width: 120px;
 }
 
 .correct {

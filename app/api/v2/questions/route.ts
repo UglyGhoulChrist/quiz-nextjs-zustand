@@ -24,6 +24,7 @@ async function GET(req: NextRequest): Promise<NextResponse<IQuestion[]>> {
         random20ListQuestions.push(listQuestions[position])
     })
 
+    // return NextResponse.json(listQuestions)
     return NextResponse.json(random20ListQuestions)
 }
 

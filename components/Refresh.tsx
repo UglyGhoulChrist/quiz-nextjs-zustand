@@ -9,7 +9,10 @@ function Refresh(): JSX.Element {
 
     return (
 
-        <Button text='Ещё 20' onClick={() => router.refresh()} />
+        <Button text='Ещё 20' onClick={() => {
+            window.scrollTo(0, 0)
+            router.refresh()
+        }} />
     )
 }
 
