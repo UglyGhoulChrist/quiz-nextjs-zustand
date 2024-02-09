@@ -6,7 +6,9 @@ type Props = {
 }
 
 function Button({ text, onClick }: Props): JSX.Element {
+
     return (
+
         <button onClick={onClick} className={styles.button}>
             {text}
         </button>

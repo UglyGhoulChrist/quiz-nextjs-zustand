@@ -1,8 +1,9 @@
 'use client'
 
-import styles from '@/components/PreCode.module.scss'
+import styles from '@/components/PreCode.module.css'
 import { IQuestion } from '@/interfaces/interfaces'
-import Copy from './Copy'
+import Copy from '@/components/Copy'
+import { clsx } from 'clsx'
 
 import javascript from '@/highlight/javascript'
 hljs.registerLanguage('javascript', javascript)
@@ -30,7 +31,7 @@ function PreCode({ question }: Props): JSX.Element {
                 <h3 className={styles.title}>JavaScript:</h3>
                 <Copy textQuestion={textQuestion} />
             </div>
-            <code className={`${styles.code} language-javascript`}>{textQuestion}</code>
+            <code className={clsx(styles.code, 'language-javascript')}>{textQuestion}</code>
         </pre>
     )
 }

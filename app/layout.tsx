@@ -3,8 +3,9 @@ import { Roboto } from 'next/font/google'
 import '@/app/layout.css'
 import '@/highlight/atom-one-light.css'
 import Header from '@/components/Header'
+import { NextFont } from 'next/dist/compiled/@next/font'
 
-const roboto = Roboto({ weight: ['400', '500'], style: 'normal', subsets: ['cyrillic'] })
+const roboto: NextFont = Roboto({ weight: ['400', '500'], style: 'normal', subsets: ['cyrillic'] })
 
 const metadata: Metadata = {
     title: 'Quiz',
@@ -21,7 +22,9 @@ const metadata: Metadata = {
 }
 
 function RootLayout({ children, }: Readonly<{ children: React.ReactNode }>): JSX.Element {
+
     return (
+
         <html lang='ru'>
             <body className={roboto.className} >
                 <Header />

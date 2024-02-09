@@ -1,4 +1,4 @@
-import styles from '@/components/Copy.module.scss'
+import styles from '@/components/Copy.module.css'
 
 type Props = {
     textQuestion: string,

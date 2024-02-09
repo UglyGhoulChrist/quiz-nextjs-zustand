@@ -13,4 +13,19 @@ interface IDataModal {
     idxUserAnswer?: null | 0 | 1 | 2 | 3,
 }
 
-export type { IQuestion, IDataModal }
+interface IUseModal {
+    modalVisible: boolean,
+    dataModal: IDataModal,
+    showModal: () => void,
+    hideModal: () => void,
+    setDataModal: (dataModal: IDataModal) => void,
+}
+
+interface IUseCounter {
+    correct: number,
+    inCorrect: number,
+    setCorrect: () => void,
+    setInCorrect: () => void,
+}
+
+export type { IQuestion, IDataModal, IUseModal, IUseCounter }

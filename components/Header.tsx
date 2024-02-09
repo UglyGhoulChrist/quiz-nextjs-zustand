@@ -1,6 +1,6 @@
 import styles from '@/components/Header.module.css'
-import Counter from './Counter'
-import Refresh from './Refresh'
+import Counter from '@/components/Counter'
+import Refresh from '@/components/Refresh'
 
 function Header(): JSX.Element {
 
