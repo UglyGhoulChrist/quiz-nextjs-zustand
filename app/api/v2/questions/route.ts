@@ -28,4 +28,6 @@ async function GET(req: NextRequest): Promise<NextResponse<IQuestion[]>> {
     return NextResponse.json(random20ListQuestions)
 }
 
-export { GET } 
+export { GET }
+
+export const dynamic = 'force-dynamic'
